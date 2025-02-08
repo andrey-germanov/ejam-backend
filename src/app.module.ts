@@ -18,7 +18,7 @@ dotenv.config();
       password: process.env.DATABASE_PASSWORD,
       database: process.env.DATABASE_NAME,
       entities: [Superhero],
-      synchronize: true, // turn off if you use this in production
+      synchronize: false, // turn off if you use this in production
     }),
   ],
 })
