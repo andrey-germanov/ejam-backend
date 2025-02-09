@@ -39,4 +39,4 @@ Run the backend:
 ## Technologies Used
 [Backend]: NestJS, PostgreSQL, TypeORM
 [Testing]: Jest
-[Deployment]: Render.com
+[Deployment]: Railway.com
