@@ -18,6 +18,9 @@ dotenv.config();
       password: process.env.DATABASE_PASSWORD,
       database: process.env.DATABASE_NAME,
       entities: [Superhero],
+      ssl: {
+        rejectUnauthorized: false, // for Render
+      },
       synchronize: false, // turn off if you use this in production
     }),
   ],
