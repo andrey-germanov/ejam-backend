@@ -20,7 +20,7 @@ describe('Superhero API (e2e)', () => {
   });
 
   it('should add a new superhero (POST /superheroes)', async () => {
-    const newHero = { name: 'Captain Humble', superpower: 'Kindness', humilityScore: 10 };
+    const newHero = { name: 'Captain Humble', superpower: 'Kindness', humilityscore: 10 };
 
     const response = await request(app.getHttpServer())
       .post('/superheroes')
@@ -31,12 +31,12 @@ describe('Superhero API (e2e)', () => {
     expect(response.body).toHaveProperty('id');
   });
 
-  it('should fetch list sorted by humilityScore (GET /superheroes)', async () => {
+  it('should fetch list sorted by humilityscore (GET /superheroes)', async () => {
     const response = await request(app.getHttpServer()).get('/superheroes').expect(200);
     
     expect(Array.isArray(response.body)).toBe(true);
     if (response.body.length > 1) {
-      expect(response.body[0].humilityScore).toBeGreaterThanOrEqual(response.body[1].humilityScore);
+      expect(response.body[0].humilityscore).toBeGreaterThanOrEqual(response.body[1].humilityscore);
     }
   });
 });

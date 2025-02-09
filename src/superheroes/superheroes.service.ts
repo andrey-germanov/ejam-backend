@@ -22,6 +22,6 @@ export class SuperheroesService {
   }
 
   async findAll(): Promise<Superhero[]> {
-    return this.superheroesRepository.find({ order: { humilityScore: 'DESC' } });
+    return this.superheroesRepository.find({ order: { humilityscore: 'DESC' } });
   }
 }

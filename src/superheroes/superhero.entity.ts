@@ -12,5 +12,5 @@ export class Superhero {
   superpower: string;
 
   @Column()
-  humilityScore: number;
+  humilityscore: number;
 }
